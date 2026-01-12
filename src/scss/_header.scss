@@ -1,24 +1,54 @@
-@use "../common";
-
 header {
-  border-bottom: solid 1px var(--border-color);
-  background-color: var(--background-color);
+  border-bottom: solid 1px rgb(211, 220, 223);
+  background-color: rgb(225, 225, 225);
   position: sticky;
   top: 0;
   z-index: 50;
 
-  div.container > div {
-    gap: 2rem;
-  }
+  div.container {
+    min-width: 90vw;
+    margin: 0px auto;
 
-  h3 {
-    margin: 0px;
-    @include common.fontStyle(1.25rem, 700, 1.75rem);
-    color: var(--primary-color);
-  }
+    padding-left: 2rem;
+    padding-right: 2rem;
 
-  nav {
-    display: var(--nav-display);
-    gap: 1.5rem;
+    > div {
+      height: 4rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.75rem;
+        color: rgb(30, 159, 171);
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+
+        &.left {
+          gap: 0.5em;
+        }
+      }
+
+      nav {
+        display: flex;
+        gap: 1.5rem;
+
+        a {
+          color: rgb(68, 68, 68);
+          text-decoration: inherit;
+
+          &:hover {
+            color: rgb(110, 87, 224);
+          }
+        }
+      }
+    }
   }
 }
